@@ -2,9 +2,12 @@ import { useState } from 'react'
 import { AddCategory } from './GiffExpertApp/AddCategory';
 import { GifGrid } from './GiffExpertApp/GifGrid';
 
+
 export const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['OnPunch']);
+   
+
+    const [categories, setCategories] = useState([]);
 
     //onAddCategory nos permite agregar una nueva categoria a la lista de categorias.
     const onAddCategory = (newCategory) => {
@@ -29,9 +32,9 @@ export const GifExpertApp = () => {
 
         <div className='container mt-5'>
             <div className="d-flex flex-row mb-3">
-                <div className="p-2">Flex item 1</div>
-                <div className="p-2">Flex item 2</div>
-                <div className="p-2">Flex item 3</div>
+                <div className="p-2">Bienvenidos | </div>
+                <div className="p-2">Buscar Memes | </div>
+                <div className="p-2">Salir</div>
             </div>
 
             <h1 >GifApp : </h1>
