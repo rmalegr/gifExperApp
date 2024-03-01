@@ -7,9 +7,7 @@ export const suma = (resultado) => {
     console.log(numero)
 }
 
-
 suma.PropTypes = {
-    
     resultado: PropTypes.number.isRequired,
 }
 

@@ -1,12 +1,7 @@
 import { useState } from 'react'
-import { AddCategory } from './GiffExpertApp/AddCategory';
-import { GifGrid } from './GiffExpertApp/GifGrid';
-
+import { AddCategory, GifGrid } from './index';
 
 export const GifExpertApp = () => {
-
-   
-
     const [categories, setCategories] = useState([]);
 
     //onAddCategory nos permite agregar una nueva categoria a la lista de categorias.
@@ -20,12 +15,8 @@ export const GifExpertApp = () => {
     //Eliminamos la categoria que se pasa como parametro.
     //setCategories nos permite actualizar el estado de las categorias.
     //setCategories(categories.filter(c => c !== category));
-
-
     // console.log(categories);
-
     // categories.forEach(category => console.log('Utilizando el ForEach', category));
-
     //listado de Gif
 
     return (
@@ -40,18 +31,16 @@ export const GifExpertApp = () => {
             <h1 >GifApp : </h1>
             <hr />
             <AddCategory onNewCategory={(value) => onAddCategory(value)} />
-            <div className=''>
-                {
+                    <>
+                        {
+                            categories.map((categoria) => (
+                                <GifGrid key={categoria}
+                                    category={categoria}
+                                />
+                            ))
 
-                    categories.map((categoria) => (
-                        <GifGrid key={categoria}
-                            category={categoria}
-                        />
-                    ))
-
-                }
-
-            </div>
+                        }
+                    </>
         </div>
 
 
